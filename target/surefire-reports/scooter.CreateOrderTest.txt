@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: scooter.CreateOrderTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.601 s <<< FAILURE! - in scooter.CreateOrderTest
+createOrdersWithDifferentColors[0](scooter.CreateOrderTest)  Time elapsed: 0.257 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at scooter.CreateOrderTest.createOrdersWithDifferentColors(CreateOrderTest.java:32)
+
+createOrdersWithDifferentColors[1](scooter.CreateOrderTest)  Time elapsed: 0.108 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at scooter.CreateOrderTest.createOrdersWithDifferentColors(CreateOrderTest.java:32)
+
+createOrdersWithDifferentColors[2](scooter.CreateOrderTest)  Time elapsed: 0.105 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at scooter.CreateOrderTest.createOrdersWithDifferentColors(CreateOrderTest.java:32)
+
+createOrdersWithDifferentColors[3](scooter.CreateOrderTest)  Time elapsed: 0.098 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at scooter.CreateOrderTest.createOrdersWithDifferentColors(CreateOrderTest.java:32)
+

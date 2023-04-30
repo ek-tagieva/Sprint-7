@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="scooter.LoginCourierTest" time="1.913" tests="5" errors="5" skipped="0" failures="0">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/kate/java/Sprint_7/target/test-classes:/Users/kate/java/Sprint_7/target/classes:/Users/kate/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0.jar:/Users/kate/.m2/repository/org/apache/groovy/groovy/4.0.6/groovy-4.0.6.jar:/Users/kate/.m2/repository/org/apache/groovy/groovy-xml/4.0.6/groovy-xml-4.0.6.jar:/Users/kate/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/kate/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/kate/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/kate/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/kate/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/kate/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/kate/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/kate/.m2/repository/io/rest-assured/json-path/5.3.0/json-path-5.3.0.jar:/Users/kate/.m2/repository/org/apache/groovy/groovy-json/4.0.6/groovy-json-4.0.6.jar:/Users/kate/.m2/repository/io/rest-assured/rest-assured-common/5.3.0/rest-assured-common-5.3.0.jar:/Users/kate/.m2/repository/io/rest-assured/xml-path/5.3.0/xml-path-5.3.0.jar:/Users/kate/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/kate/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/Users/kate/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/kate/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar:/Users/kate/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar:/Users/kate/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar:/Users/kate/.m2/repository/io/qameta/allure/allure-junit4/2.21.0/allure-junit4-2.21.0.jar:/Users/kate/.m2/repository/io/qameta/allure/allure-java-commons/2.21.0/allure-java-commons-2.21.0.jar:/Users/kate/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/kate/.m2/repository/io/qameta/allure/allure-model/2.21.0/allure-model-2.21.0.jar:/Users/kate/.m2/repository/io/qameta/allure/allure-rest-assured/2.21.0/allure-rest-assured-2.21.0.jar:/Users/kate/.m2/repository/io/qameta/allure/allure-attachments/2.21.0/allure-attachments-2.21.0.jar:/Users/kate/.m2/repository/org/freemarker/freemarker/2.3.31/freemarker-2.3.31.jar:/Users/kate/.m2/repository/org/aspectj/aspectjweaver/1.9.8/aspectjweaver-1.9.8.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/kate/java/Sprint_7/target/surefire/surefirebooter16732266585395557304.jar /Users/kate/java/Sprint_7/target/surefire 2023-04-30T11-13-02_281-jvmRun1 surefire10383580386411928991tmp surefire_05905636614538049789tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/kate/java/Sprint_7/target/test-classes:/Users/kate/java/Sprint_7/target/classes:/Users/kate/.m2/repository/io/rest-assured/rest-assured/5.3.0/rest-assured-5.3.0.jar:/Users/kate/.m2/repository/org/apache/groovy/groovy/4.0.6/groovy-4.0.6.jar:/Users/kate/.m2/repository/org/apache/groovy/groovy-xml/4.0.6/groovy-xml-4.0.6.jar:/Users/kate/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/kate/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/kate/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/kate/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/kate/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/kate/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/kate/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/kate/.m2/repository/io/rest-assured/json-path/5.3.0/json-path-5.3.0.jar:/Users/kate/.m2/repository/org/apache/groovy/groovy-json/4.0.6/groovy-json-4.0.6.jar:/Users/kate/.m2/repository/io/rest-assured/rest-assured-common/5.3.0/rest-assured-common-5.3.0.jar:/Users/kate/.m2/repository/io/rest-assured/xml-path/5.3.0/xml-path-5.3.0.jar:/Users/kate/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/Users/kate/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/Users/kate/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/kate/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar:/Users/kate/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar:/Users/kate/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar:/Users/kate/.m2/repository/io/qameta/allure/allure-junit4/2.21.0/allure-junit4-2.21.0.jar:/Users/kate/.m2/repository/io/qameta/allure/allure-java-commons/2.21.0/allure-java-commons-2.21.0.jar:/Users/kate/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/kate/.m2/repository/io/qameta/allure/allure-model/2.21.0/allure-model-2.21.0.jar:/Users/kate/.m2/repository/io/qameta/allure/allure-rest-assured/2.21.0/allure-rest-assured-2.21.0.jar:/Users/kate/.m2/repository/io/qameta/allure/allure-attachments/2.21.0/allure-attachments-2.21.0.jar:/Users/kate/.m2/repository/org/freemarker/freemarker/2.3.31/freemarker-2.3.31.jar:/Users/kate/.m2/repository/org/aspectj/aspectjweaver/1.9.8/aspectjweaver-1.9.8.jar:"/>
+    <property name="allure.results.directory" value="/Users/kate/java/Sprint_7/target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/kate"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/kate/java/Sprint_7"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/kate/java/Sprint_7/target/surefire/surefirebooter16732266585395557304.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.18+10-LTS"/>
+    <property name="user.name" value="kate"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="12.0.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-11.0.18.10.1"/>
+    <property name="localRepository" value="/Users/kate/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-11/issues/"/>
+    <property name="java.io.tmpdir" value="/var/folders/88/0btyndhx6351hy6_72dglgbr0000gn/T/"/>
+    <property name="idea.version" value="2022.3.2"/>
+    <property name="java.version" value="11.0.18"/>
+    <property name="user.dir" value="/Users/kate/java/Sprint_7"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/kate/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="11.0.18+10-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="courierAuthorizationWithoutPassword" classname="scooter.LoginCourierTest" time="0.417">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at scooter.LoginCourierTest.setUp(LoginCourierTest.java:26)
+</error>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "login": "IQShuZLiaq",
+    "password": "hJxHQgEMHN",
+    "firstName": "HFxToGvScD"
+}
+HTTP/1.1 201 Created
+Access-Control-Allow-Origin: *
+Content-Length: 11
+Content-Type: application/json; charset=utf-8
+Date: Sun, 30 Apr 2023 08:13:23 GMT
+ETag: W/"b-Ai2R8hgEarLmHKwesT1qcY913ys"
+Set-Cookie: _yasc=3Wt0IbB0dgvvUKQD9uNEl9YyNyx2o/4RJ1niGNEmC7PaY0jz/mkAHb+rspk=; domain=.praktikum-services.ru; path=/; expires=Wed, 27-Apr-2033 08:13:23 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1682842403929315-6401030336772994569
+
+{
+    "ok": true
+}
+Request method:	DELETE
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier/null
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 500 Internal Server Error
+Access-Control-Allow-Origin: *
+Content-Length: 72
+Content-Type: application/json; charset=utf-8
+Date: Sun, 30 Apr 2023 08:13:24 GMT
+ETag: W/"48-76hGKQr04QkaloN76ZVge2UscW4"
+Set-Cookie: _yasc=8jC943JCifrNXSjF+DiIv9c7Y8wTx6/MlMkRfzrb+3OZVabobnYm89UAtsbK; domain=.praktikum-services.ru; path=/; expires=Wed, 27-Apr-2033 08:13:24 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1682842404238085-6404154691190529173
+
+{
+    "code": 500,
+    "message": "invalid input syntax for type integer: \"null\""
+}
+]]></system-out>
+  </testcase>
+  <testcase name="courierAuthorizationWithInvalidPassword" classname="scooter.LoginCourierTest" time="0.37">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at scooter.LoginCourierTest.setUp(LoginCourierTest.java:26)
+</error>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "login": "ReuysgRKMS",
+    "password": "RyVNsLGzjx",
+    "firstName": "mjTDWckJlM"
+}
+HTTP/1.1 201 Created
+Access-Control-Allow-Origin: *
+Content-Length: 11
+Content-Type: application/json; charset=utf-8
+Date: Sun, 30 Apr 2023 08:13:24 GMT
+ETag: W/"b-Ai2R8hgEarLmHKwesT1qcY913ys"
+Set-Cookie: _yasc=jonLj3vUQQ/Jg7fH90h/vFuc/G6onUH61LNalvucTXvXEZ5KU0gecarFeCXx; domain=.praktikum-services.ru; path=/; expires=Wed, 27-Apr-2033 08:13:24 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1682842404374729-11018926647113176047
+
+{
+    "ok": true
+}
+Request method:	DELETE
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier/null
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 500 Internal Server Error
+Access-Control-Allow-Origin: *
+Content-Length: 72
+Content-Type: application/json; charset=utf-8
+Date: Sun, 30 Apr 2023 08:13:24 GMT
+ETag: W/"48-76hGKQr04QkaloN76ZVge2UscW4"
+Set-Cookie: _yasc=tUxyOuPiia4jIa+6GfJKV1TTqOuUeIxFDIb/J0VDzqum757eCOlrSKR6k0Q=; domain=.praktikum-services.ru; path=/; expires=Wed, 27-Apr-2033 08:13:24 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1682842404620891-4843830318466409809
+
+{
+    "code": 500,
+    "message": "invalid input syntax for type integer: \"null\""
+}
+]]></system-out>
+  </testcase>
+  <testcase name="courierAuthorizationWithoutLogin" classname="scooter.LoginCourierTest" time="0.402">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at scooter.LoginCourierTest.setUp(LoginCourierTest.java:26)
+</error>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "login": "DjEJafIlbD",
+    "password": "PrZocoSNcR",
+    "firstName": "IqsQZbERnU"
+}
+HTTP/1.1 201 Created
+Access-Control-Allow-Origin: *
+Content-Length: 11
+Content-Type: application/json; charset=utf-8
+Date: Sun, 30 Apr 2023 08:13:24 GMT
+ETag: W/"b-Ai2R8hgEarLmHKwesT1qcY913ys"
+Set-Cookie: _yasc=izGLQecsXP3Du84FNd7PFAJcM79qZDI2i4eciQ0sgpAK3ezzi6bSmT9V7rc=; domain=.praktikum-services.ru; path=/; expires=Wed, 27-Apr-2033 08:13:24 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1682842404725302-9886097446485374052
+
+{
+    "ok": true
+}
+Request method:	DELETE
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier/null
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 500 Internal Server Error
+Access-Control-Allow-Origin: *
+Content-Length: 72
+Content-Type: application/json; charset=utf-8
+Date: Sun, 30 Apr 2023 08:13:25 GMT
+ETag: W/"48-76hGKQr04QkaloN76ZVge2UscW4"
+Set-Cookie: _yasc=sf/xeHE3tp5G8KxBbQ25C9jt25XE38UB79NiUe7Dzl15codrjO8+f9ug2dOX; domain=.praktikum-services.ru; path=/; expires=Wed, 27-Apr-2033 08:13:25 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1682842404983826-3439290036684218298
+
+{
+    "code": 500,
+    "message": "invalid input syntax for type integer: \"null\""
+}
+]]></system-out>
+  </testcase>
+  <testcase name="courierAuthorizationSystem" classname="scooter.LoginCourierTest" time="0.347">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at scooter.LoginCourierTest.setUp(LoginCourierTest.java:26)
+</error>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "login": "jSjyelayFn",
+    "password": "fFTEEoHmwA",
+    "firstName": "mdUiPSuPWk"
+}
+HTTP/1.1 201 Created
+Access-Control-Allow-Origin: *
+Content-Length: 11
+Content-Type: application/json; charset=utf-8
+Date: Sun, 30 Apr 2023 08:13:25 GMT
+ETag: W/"b-Ai2R8hgEarLmHKwesT1qcY913ys"
+Set-Cookie: _yasc=4xnx9nEmERCLMBEIIj5geTwR32zKkC7rGG5p0bvqBfEqcjX8WX4SPdG2+uI=; domain=.praktikum-services.ru; path=/; expires=Wed, 27-Apr-2033 08:13:25 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1682842405125954-13701691402039556651
+
+{
+    "ok": true
+}
+Request method:	DELETE
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier/null
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 500 Internal Server Error
+Access-Control-Allow-Origin: *
+Content-Length: 72
+Content-Type: application/json; charset=utf-8
+Date: Sun, 30 Apr 2023 08:13:25 GMT
+ETag: W/"48-76hGKQr04QkaloN76ZVge2UscW4"
+Set-Cookie: _yasc=K1b+gcufyT9vhX7xwU6utfAI96pyBqRCUbhdXgzx61GfT9sYQ6/QoKApwUk=; domain=.praktikum-services.ru; path=/; expires=Wed, 27-Apr-2033 08:13:25 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1682842405368632-4024494487775428852
+
+{
+    "code": 500,
+    "message": "invalid input syntax for type integer: \"null\""
+}
+]]></system-out>
+  </testcase>
+  <testcase name="courierAuthorizationWithInvalidLogin" classname="scooter.LoginCourierTest" time="0.369">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at scooter.LoginCourierTest.setUp(LoginCourierTest.java:26)
+</error>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "login": "ZEfOMMwXVi",
+    "password": "FGjOesSxyo",
+    "firstName": "ejvpaKmmkY"
+}
+HTTP/1.1 201 Created
+Access-Control-Allow-Origin: *
+Content-Length: 11
+Content-Type: application/json; charset=utf-8
+Date: Sun, 30 Apr 2023 08:13:25 GMT
+ETag: W/"b-Ai2R8hgEarLmHKwesT1qcY913ys"
+Set-Cookie: _yasc=EfX+fLGTKSrlan7Kr9dfDF1khu0eryCjZFI4YdHUqHXy+yIujv1zQcJIVVVH; domain=.praktikum-services.ru; path=/; expires=Wed, 27-Apr-2033 08:13:25 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1682842405471765-10255391150834835165
+
+{
+    "ok": true
+}
+Request method:	DELETE
+Request URI:	http://qa-scooter.praktikum-services.ru/api/v1/courier/null
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 500 Internal Server Error
+Access-Control-Allow-Origin: *
+Content-Length: 72
+Content-Type: application/json; charset=utf-8
+Date: Sun, 30 Apr 2023 08:13:25 GMT
+ETag: W/"48-76hGKQr04QkaloN76ZVge2UscW4"
+Set-Cookie: _yasc=xg3buNLtWnIOljRftOqnaYEtUqOd4P72JKzkvCdM5Jv5ASH32UrgwjOjsuMr; domain=.praktikum-services.ru; path=/; expires=Wed, 27-Apr-2033 08:13:25 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1682842405715980-9984224508063708563
+
+{
+    "code": 500,
+    "message": "invalid input syntax for type integer: \"null\""
+}
+]]></system-out>
+  </testcase>
+</testsuite>
