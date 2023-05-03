@@ -17,8 +17,15 @@ public class CourierClient extends RestClient {
                 .body(courierRegisterPojo).log().all()
                 .post(COURIER_CREATE).then().log().all();
     }
+
+    @Step("Получение id")
+    public static String getId(ValidatableResponse response) {
+        return response.extract().path("id").toString();
+    }
+
     @Step ("Логин курьера в системе")
     public static ValidatableResponse loginCourier(CourierLoginPojo courierLoginPojoPojo){
+
         return given()
                 .spec(RestClient.getBaseSpec())
                 .when()

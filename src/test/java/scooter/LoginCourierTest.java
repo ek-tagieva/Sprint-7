@@ -10,11 +10,12 @@ import static org.apache.http.HttpStatus.*;
 public class LoginCourierTest {
     CourierRegisterPojo courierRegisterPojo;
     CourierClient courierClient;
-    String id;
+    String userId;
     @Before
     public void setUp() {
         courierRegisterPojo = CourierRegisterPojo.generateCourierRandom();
         CourierClient.createCourier(courierRegisterPojo);
+        userId = CourierClient.getId(CourierClient.loginCourier(CourierLoginPojo.getCredentials(courierRegisterPojo)));
     }
 
     @Test
@@ -81,8 +82,6 @@ public class LoginCourierTest {
     }
     @After
     public void cleanUp(){
-
-        courierClient.deleteCourier(id);
+        CourierClient.deleteCourier(userId);
     }
-
 }
