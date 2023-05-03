@@ -4,34 +4,26 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.*;
-import static scooter.CourierClient.COURIER_CREATE;
-import static scooter.CourierLoginPojo.getCredentials;
+import static org.apache.http.HttpStatus.*;
 
 public class LoginCourierTest {
     CourierRegisterPojo courierRegisterPojo;
     CourierClient courierClient;
-    String courierId;
+    String id;
     @Before
     public void setUp() {
-
         courierRegisterPojo = CourierRegisterPojo.generateCourierRandom();
         CourierClient.createCourier(courierRegisterPojo);
-        courierId = given()
-                .spec(RestClient.getBaseSpec())
-                .when()
-                .body(getCredentials(courierRegisterPojo))
-                .post(COURIER_CREATE + "login")
-                .then().extract().path("id").toString();
     }
 
     @Test
     @DisplayName("Проверка авторизации курьера в системе")
     public void courierAuthorizationSystem(){
         ValidatableResponse response = CourierClient.loginCourier(CourierLoginPojo.getCredentials(courierRegisterPojo));
+
         response
-                .statusCode(200)
+                .statusCode(SC_OK)
                 .assertThat()
                 .body("id",is(notNullValue()));
     }
@@ -41,9 +33,9 @@ public class LoginCourierTest {
         courierRegisterPojo.setLogin("");
         ValidatableResponse response = CourierClient.loginCourier(CourierLoginPojo.getCredentials(courierRegisterPojo));
         response
-                .statusCode(400)
+                .statusCode(SC_BAD_REQUEST)
                 .assertThat()
-                .body("code",equalTo(400))
+                .body("code",equalTo(SC_BAD_REQUEST))
                 .and()
                 .body("message", equalTo("Недостаточно данных для входа"));
 
@@ -54,9 +46,9 @@ public class LoginCourierTest {
         courierRegisterPojo.setPassword("");
         ValidatableResponse response = CourierClient.loginCourier(CourierLoginPojo.getCredentials(courierRegisterPojo));
         response
-                .statusCode(400)
+                .statusCode(SC_BAD_REQUEST)
                 .assertThat()
-                .body("code",equalTo(400))
+                .body("code",equalTo(SC_BAD_REQUEST))
                 .and()
                 .body("message", equalTo("Недостаточно данных для входа"));
 
@@ -67,9 +59,9 @@ public class LoginCourierTest {
         courierRegisterPojo.setLogin("vfkgrp");
         ValidatableResponse response = CourierClient.loginCourier(CourierLoginPojo.getCredentials(courierRegisterPojo));
         response
-                .statusCode(404)
+                .statusCode(SC_NOT_FOUND)
                 .assertThat()
-                .body("code",equalTo(404))
+                .body("code",equalTo(SC_NOT_FOUND))
                 .and()
                 .body("message", equalTo("Учетная запись не найдена"));
 
@@ -80,9 +72,9 @@ public class LoginCourierTest {
         courierRegisterPojo.setPassword("sdefr");
         ValidatableResponse response = CourierClient.loginCourier(CourierLoginPojo.getCredentials(courierRegisterPojo));
         response
-                .statusCode(404)
+                .statusCode(SC_NOT_FOUND)
                 .assertThat()
-                .body("code",equalTo(404))
+                .body("code",equalTo(SC_NOT_FOUND))
                 .and()
                 .body("message", equalTo("Учетная запись не найдена"));
 
@@ -90,7 +82,7 @@ public class LoginCourierTest {
     @After
     public void cleanUp(){
 
-        courierClient.deleteCourier(courierId);
+        courierClient.deleteCourier(id);
     }
 
 }

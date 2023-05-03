@@ -5,10 +5,9 @@ import io.restassured.response.ValidatableResponse;
 
 
 public class CourierClient extends RestClient {
-    public static final String COURIER_CREATE = "/api/v1/courier";
+    public static final String COURIER_CREATE = "/api/v1/courier/";
     public static final String COURIER_LOGIN = "/api/v1/courier/login";
     public static final String COURIER_DELETE = "/api/v1/courier/";
-
 
     @Step("Создание курьера")
     public static ValidatableResponse createCourier(CourierRegisterPojo courierRegisterPojo) {
@@ -34,6 +33,5 @@ public class CourierClient extends RestClient {
                 .delete(COURIER_DELETE + id).then().log().all();
 
     }
-
 
 }

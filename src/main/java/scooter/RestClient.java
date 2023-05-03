@@ -4,7 +4,7 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 public class RestClient {
-    private static final String BASE_URL = "http://qa-scooter.praktikum-services.ru/";
+    private static final String BASE_URL = "https://qa-scooter.praktikum-services.ru";
 
 
     protected static RequestSpecification getBaseSpec(){

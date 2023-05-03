@@ -6,16 +6,17 @@ import org.junit.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import io.restassured.response.ValidatableResponse;
+import static org.apache.http.HttpStatus.*;
 
 
 
 public class CreatingCourierTest {
     CourierRegisterPojo courierRegisterPojo;
-    CourierClient courierClient;
     String courierId;
 
    @Before
    public void setUp() {
+
        courierRegisterPojo = CourierRegisterPojo.generateCourierRandom();
    }
     @Test
@@ -25,7 +26,7 @@ public class CreatingCourierTest {
         ValidatableResponse loginResponse = CourierClient.loginCourier(CourierLoginPojo.getCredentials(courierRegisterPojo));
         courierId = loginResponse.extract().path("id").toString();
         regResponse
-                .statusCode(201)
+                .statusCode(SC_CREATED)
                 .assertThat()
                 .body("ok", is(true));
     }
@@ -38,11 +39,11 @@ public class CreatingCourierTest {
                 .path("id")
                 .toString();
 
-        ValidatableResponse response = (ValidatableResponse) CourierClient.createCourier(courierRegisterPojo);
+        ValidatableResponse response = CourierClient.createCourier(courierRegisterPojo);
         response
-                .statusCode(409)
+                .statusCode(SC_CONFLICT)
                 .assertThat()
-                .body("code",equalTo(409))
+                .body("code",equalTo(SC_CONFLICT))
                 .and()
                 .body("message",equalTo("Этот логин уже используется. Попробуйте другой."));
     }
@@ -52,7 +53,7 @@ public class CreatingCourierTest {
         courierRegisterPojo.setLogin(null);
         ValidatableResponse response = CourierClient.createCourier(courierRegisterPojo);
         response
-                .statusCode(400)
+                .statusCode(SC_BAD_REQUEST)
                 .assertThat()
                 .body("message", equalTo("Недостаточно данных для создания учетной записи"));
     }
@@ -63,7 +64,7 @@ public class CreatingCourierTest {
         courierRegisterPojo.setLogin(null);
         ValidatableResponse response = CourierClient.createCourier(courierRegisterPojo);
             response
-                    .statusCode(400)
+                    .statusCode(SC_BAD_REQUEST)
                     .assertThat()
                     .body("message", equalTo("Недостаточно данных для создания учетной записи"));
 
@@ -77,13 +78,13 @@ public class CreatingCourierTest {
         ValidatableResponse loginResponse = CourierClient.loginCourier(CourierLoginPojo.getCredentials(courierRegisterPojo));
         courierId = loginResponse.extract().path("id").toString();
         regResponse
-                .statusCode(201)
+                .statusCode(SC_CREATED)
                 .assertThat()
                 .body("ok", is(true));
 
     }
     @After
     public void cleanUp(){
-        courierClient.deleteCourier(courierId);
+        CourierClient.deleteCourier(courierId);
     }
 }

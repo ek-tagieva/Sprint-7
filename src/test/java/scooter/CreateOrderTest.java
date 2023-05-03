@@ -5,13 +5,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.apache.http.HttpStatus.*;
 
 @RunWith(Parameterized.class)
 public class CreateOrderTest {
     private final OrderPojo orderPojo;
-    private OrderClient orderClient;
 
     public CreateOrderTest(OrderPojo orderPojo) {
+
         this.orderPojo = orderPojo;
     }
 
@@ -27,9 +28,9 @@ public class CreateOrderTest {
     @Test
     @DisplayName("Проверка создания заказов с разными цветами")
     public void createOrdersWithDifferentColors(){
-        OrderClient orderClient = new OrderClient();
-        ValidatableResponse response = orderClient.createOrder(orderPojo).then();
-        response.statusCode(201)
+        OrderPojo orderPojo = new OrderPojo();
+        ValidatableResponse response = OrderClient.createOrder(orderPojo).then();
+        response.statusCode(SC_CREATED)
                 .assertThat()
                 .body("track", notNullValue());
 
